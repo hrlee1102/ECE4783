@@ -1,4 +1,4 @@
-imds = imageDatastore('Image_data','IncludeSubfolders',true,'LabelSource','foldernames');
+mimds = imageDatastore('Image_data','IncludeSubfolders',true,'LabelSource','foldernames');
 [imdsTrain,imdsTest] = splitEachLabel(imds,0.7,'randomized');
 numTrainImages = numel(imdsTrain.Labels);
 idx = randperm(numTrainImages,16);
